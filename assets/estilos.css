@@ -1,0 +1,294 @@
+/* Tipografía global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ======= Variables de Colores (AJUSTADAS) ======= */
+:root {
+  --naranja: #5fc971;    /* Verde Vibrante (Registro/Acento) */
+  --naranja-oscuro: #4caf50; /* Tono más oscuro para el hover del Naranja */
+  --azul: #264653;       /* Azul Oscuro (Principal para texto y outline) */
+  --celeste: #8ecae6;    /* Celeste claro (Fondo/Acentos) */
+  --azul-suave: #2A9D8F; /* Verde Azulado (Color principal de botones/acento) */
+  --azul-hover: #1e7d72; /* Tono más oscuro de azul-suave para hover */
+  --blanco: #ffffff;
+  --gris-texto: #6c757d;
+  --sombra-suave: rgba(0, 0, 0, 0.08);
+  --sombra-fuerte: rgba(0, 0, 0, 0.15);
+  --fondo-pagina: #f8f9fa; /* Nuevo: Fondo muy suave para la página */
+}
+
+/* ================================================= */
+/* ======= MEJORAS GLOBALES DE TIPOGRAFÍA Y FONDO ======= */
+/* ================================================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Fondo mejorado: Se usa la variable de fondo suave */
+  background-color: var(--fondo-pagina); 
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  /* Tamaño de letra base y altura de línea para mejor legibilidad */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Contenedor principal para que el contenido resalte sobre el fondo de la página */
+.container {
+    background-color: var(--blanco);
+    /* Aplicar sombra suave para un efecto de elevación (Bootstrap: shadow-sm) */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Mejora el tamaño de los títulos principales (ej: <h1> de Grooming) */
+.display-5 {
+    font-size: 2.8rem !important; 
+    font-weight: 700 !important; /* Asegura Negrita Fuerte */
+    letter-spacing: 0.5px;
+}
+
+/* Estilo para los párrafos principales (lead) */
+.lead {
+    font-size: 1.25rem; /* Letra más grande para párrafos clave */
+    color: var(--azul);
+}
+
+/* Estilo para la lista de beneficios (bullet points) */
+.list-beneficios li {
+    margin-bottom: 12px;
+    font-size: 1.1rem; /* Aumenta el tamaño de los ítems de la lista */
+}
+
+/* Color azul en textos para clases específicas */
+.text-azul {
+    color: var(--azul) !important;
+}
+
+/* ================================================= */
+/* ======= NAVEGACIÓN Y BOTONES ======= */
+/* ================================================= */
+
+/* Ajuste de color y peso en los enlaces de la navegación */
+.border-bottom .col-md-6 a {
+    font-weight: 600; /* Negrita media para los enlaces */
+    color: var(--azul) !important;
+    transition: color 0.3s ease;
+}
+
+.border-bottom .col-md-6 a:hover {
+    color: var(--naranja) !important; /* Cambia a verde vibrante al pasar el mouse */
+}
+
+/* Botones Estándar (btn-primary) - Aplicado al botón Ingresar */
+.btn-primary {
+  background-color: var(--azul-suave);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600; /* Negrita media */
+  transition: all 0.3s ease;
+  color: var(--blanco) !important; 
+  box-shadow: 0 2px 4px var(--sombra-suave); /* Sombra para profundidad */
+}
+
+.btn-primary:hover {
+  background-color: var(--azul-hover); /* Usa el hover ajustado */
+  color: var(--blanco) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px var(--sombra-fuerte);
+}
+
+/* Botón de REGISTRO - Usa color NARANJA (Acento/Éxito - btn-success) */
+.btn-success {
+  background-color: var(--naranja) !important; /* Color de acento para registro */
+  border-color: var(--naranja) !important;
+  font-weight: 700; /* Negrita fuerte */
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: var(--naranja-oscuro) !important; 
+  border-color: var(--naranja-oscuro) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px var(--sombra-fuerte);
+}
+
+/* ======= Botones de Contorno (btn-outline-primary) ======= */
+.btn-outline-primary {
+  color: var(--azul);
+  border: 2px solid var(--azul);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--azul);
+  color: var(--blanco);
+}
+
+
+/* ================================================= */
+/* ======= SECCIÓN DE BENEFICIOS (Grooming) ======= */
+/* ================================================= */
+
+/* Estilo para los íconos de la sección "¿Por qué elegirnos?" */
+.row.text-center i.fs-1 {
+    color: var(--naranja) !important; /* Íconos en color de acento */
+}
+
+.row.text-center .col-md-4 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Efecto hover suave para los bloques de beneficios */
+.row.text-center .col-md-4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px var(--sombra-suave);
+}
+
+
+/* ======= Bloque de LLAMADA A LA ACCIÓN (Productos Recomendados) ======= */
+.bg-cta-primary {
+    /* Color de fondo: Usa el azul fuerte o el suave para generar contraste */
+    background-color: var(--azul-suave) !important; 
+    color: var(--blanco);
+    padding: 30px 20px;
+    border-radius: 0;
+}
+
+.bg-cta-primary h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.bg-cta-primary .btn-light {
+    background-color: var(--blanco);
+    color: var(--azul-suave) !important;
+    font-weight: 700;
+    padding: 8px 30px;
+}
+
+.bg-cta-primary .btn-light:hover {
+    background-color: #eee;
+    transform: translateY(-1px);
+}
+
+
+/* ================================================= */
+/* ======= MODALES (Ingreso/Registro/Cita) ======= */
+/* ================================================= */
+
+/* Encabezados de Modales con fondo */
+.modal-header {
+    /* Fondo oscuro para un look más formal */
+    background-color: var(--azul); 
+    color: var(--blanco);
+    border-bottom: 2px solid var(--naranja); /* Acento de color debajo */
+}
+
+/* Botón de cierre en blanco para Modales de fondo oscuro */
+.modal-header .btn-close {
+    filter: invert(1); 
+}
+
+.modal-body .form-label {
+    font-weight: 600; /* Etiquetas del formulario en negrita */
+}
+
+/* ================================================= */
+/* ======= FOOTER ======= */
+/* ================================================= */
+
+/* Fondo oscuro para el pie de página */
+footer {
+    background-color: var(--azul) !important;
+    color: #cccccc;
+    font-size: 0.95rem; /* Letra un poco más pequeña y sutil */
+}
+
+footer h6 {
+    color: var(--naranja) !important; /* Títulos en color de acento */
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #e0e0e0;
+}
+
+/* Íconos de redes sociales */
+footer a img {
+  width: 32px; /* Tamaño unificado más compacto */
+  height: 32px; 
+  object-fit: contain; 
+  vertical-align: middle; 
+  transition: transform 0.3s ease;
+}
+
+footer a img:hover {
+  transform: scale(1.15);
+}
+
+footer .text-secondary {
+  color: #999999 !important;
+}
+
+/* ================================================= */
+/* ======= CLASES DE IMAGENES (Mantenidas) ======= */
+/* ================================================= */
+
+.product-img {
+    height: 250px; 
+    object-fit: cover; 
+    width: 100%; 
+    max-width: 250px; 
+    display: block;
+    margin: 0 auto;
+}
+
+.aseo-img {
+    height: 300px; 
+    object-fit: cover; 
+    width: 100%; 
+    max-width: 500px; 
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Aplicar redondeo a la imagen */
+    box-shadow: 0 4px 8px var(--sombra-suave);
+}
+.bano-img {
+    height: 350px; 
+    object-fit: cover; 
+    width: 100%; 
+    max-width: 600px; 
+    display: block;
+    margin: 0 auto;
+}
+
+.entrenamiento-img {
+    height: 300px; 
+    object-fit: cover; 
+    width: 100%; 
+    max-width: 500px; 
+    display: block;
+    margin: 0 auto;
+}
+
+.salud-img {
+    height: 300px; 
+    object-fit: cover; 
+    width: 100%; 
+    max-width: 500px; 
+    display: block;
+    margin: 0 auto;
+}
+
+.guarderia-img {
+    height: 300px; 
+    object-fit: cover; 
+    width: 100%; 
+    max-width: 500px; 
+    display: block;
+    margin: 0 auto;
+}
